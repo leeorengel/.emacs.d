@@ -61,6 +61,7 @@
      inflections
      hydra
      paredit
+     beacon
      move-text
      gist
      htmlize
@@ -74,7 +75,6 @@
      f
      flx-ido
      dired-details
-     css-eldoc
      yasnippet
      smartparens
      ido-vertical-mode
@@ -89,10 +89,8 @@
      dockerfile-mode
      clojure-mode
      clojure-mode-extra-font-locking
-     groovy-mode
      prodigy
      cider
-     yesql-ghosts
      string-edit
      )))
 
@@ -117,6 +115,9 @@
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
 
+;; beacon
+(beacon-mode 1)
+
 ;; Setup extensions
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'org '(require 'setup-org))
@@ -140,19 +141,11 @@
 ;; Default setup of smartparens
 (require 'smartparens-config)
 (setq sp-autoescape-string-quote nil)
-(--each '(css-mode-hook
-          restclient-mode-hook
-          js-mode-hook
-          java-mode
-          ruby-mode
-          markdown-mode
-          groovy-mode
-          scala-mode)
+(--each '(clojure-mode
+          markdown-mode)
   (add-hook it 'turn-on-smartparens-mode))
 
 ;; Language specific setup files
-(eval-after-load 'js2-mode '(require 'setup-js2-mode))
-(eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
 (eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
 
