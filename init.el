@@ -57,6 +57,7 @@
 (defun init--install-packages ()
   (packages-install
    '(magit
+     switch-window
      edn
      avy
      hydra
