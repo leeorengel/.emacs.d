@@ -65,6 +65,7 @@
      beacon
      move-text
      gist
+     neotree
      htmlize
      visual-regexp
      markdown-mode
@@ -138,6 +139,7 @@
 (require 'setup-html-mode)
 (require 'setup-paredit)
 (require 'setup-rainbow-delimiters)
+(require 'setup-neotree)
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
@@ -244,3 +246,4 @@
 ;; Enable showing line numbers on startup
 ;; this isn't working right now for some reason
 ;;(global-linum-mode t)
+
