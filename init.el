@@ -72,6 +72,7 @@
      flycheck
      flycheck-pos-tip
      flycheck-clojure
+     which-key
      flx
      f
      flx-ido
@@ -81,7 +82,6 @@
      ido-vertical-mode
      ido-at-point
      simple-httpd
-     guide-key
      nodejs-repl
      restclient
      highlight-escape-sequences
@@ -111,11 +111,15 @@
   (exec-path-from-shell-initialize))
 
 ;; guide-key
-(require 'guide-key)
-(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x +"))
-(guide-key-mode 1)
-(setq guide-key/recursive-key-sequence-flag t)
-(setq guide-key/popup-window-position 'bottom)
+;;(require 'guide-key)
+;;(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x 5" "M-t"))
+;;(guide-key-mode 1)
+;;(setq guide-key/recursive-key-sequence-flag t)
+;;(setq guide-key/popup-window-position 'bottom)
+
+;; which-key - a better guide-key
+(require 'which-key)
+(which-key-mode)
 
 ;; beacon
 (beacon-mode 1)
