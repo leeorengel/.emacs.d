@@ -278,9 +278,8 @@
 (global-set-key (kbd "C-\"") 'toggle-quotes)
 
 ;; Searching
-;;(global-set-key (kbd "M-F") 'ag-project-files)
-(global-set-key (kbd "M-F") 'ag-project-file)
-;; (global-set-key (kbd "M-G") 'ag-project-regexp)
+(global-set-key (kbd "M-F") 'ag-project-files)
+(global-set-key (kbd "M-G") 'ag-project-regexp)
 
 ;; Sorting
 (global-set-key (kbd "M-s l") 'sort-lines)
