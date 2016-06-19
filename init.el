@@ -58,6 +58,8 @@
   (packages-install
    '(magit
      edn
+     ace-window
+     avy
      hydra
      paredit
      beacon
@@ -85,6 +87,7 @@
      highlight-escape-sequences
      whitespace-cleanup-mode
      elisp-slime-nav
+     rainbow-delimiters
      dockerfile-mode
      clojure-mode
      clojure-mode-extra-font-locking
@@ -130,6 +133,7 @@
 (require 'setup-ffip)
 (require 'setup-html-mode)
 (require 'setup-paredit)
+(require 'setup-rainbow-delimiters)
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
