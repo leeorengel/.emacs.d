@@ -316,6 +316,14 @@
 ;; Find file in project
 (global-set-key (kbd "C-x o") 'find-file-in-project)
 
+(defhydra hydra-zoom (global-map "<f2>")
+  "zoom"
+  ("g" text-scale-increase "in")
+  ("l" text-scale-decrease "out"))
+
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
+
 ;; Find file in project, with specific patterns
 (global-unset-key (kbd "C-x C-o")) ;; which used to be delete-blank-lines (also bound to C-c C-<return>)
 (global-set-key (kbd "C-x C-o ja") (ffip-create-pattern-file-finder "*.java"))
