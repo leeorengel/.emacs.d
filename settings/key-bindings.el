@@ -70,7 +70,7 @@
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
 ;; Use shell-like backspace C-h, rebind help to F1
-(define-key key-translation-map [?\C-h] [?\C-?])
+;;(define-key key-translation-map [?\C-h] [?\C-?])
 (global-set-key (kbd "<f1>") 'help-command)
 
 (global-set-key (kbd "M-h") 'kill-region-or-backward-word)
@@ -144,6 +144,8 @@
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+(global-set-key (kbd "C-h b") 'ido-describe-bindings)
 
 ;; toggle two most recent buffers
 (fset 'quick-switch-buffer [?\C-x ?b return])
@@ -274,6 +276,11 @@
 
 ;; Toggle quotes
 (global-set-key (kbd "C-\"") 'toggle-quotes)
+
+;; Searching
+;;(global-set-key (kbd "M-F") 'ag-project-files)
+(global-set-key (kbd "M-F") 'ag-project-file)
+;; (global-set-key (kbd "M-G") 'ag-project-regexp)
 
 ;; Sorting
 (global-set-key (kbd "M-s l") 'sort-lines)

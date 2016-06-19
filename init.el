@@ -78,6 +78,7 @@
      flx
      f
      flx-ido
+     ido-describe-bindings
      dired-details
      yasnippet
      smartparens
