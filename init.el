@@ -234,3 +234,13 @@
 ;; Conclude init by setting up specifics for the current user
 (when (file-exists-p user-settings-dir)
   (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
+
+;; Enable full-screen by default on startup
+(toggle-frame-maximized)
+
+; Set highlight exceeding character limit to 120 rather than 80
+(setq whitespace-line-column 120)
+
+;; Enable showing line numbers on startup
+;; this isn't working right now for some reason
+;;(global-linum-mode t)
