@@ -58,7 +58,6 @@
   (packages-install
    '(magit
      edn
-     inflections
      hydra
      paredit
      beacon

@@ -16,3 +16,11 @@ site-lisp/adventur-mode
 /var/
 /.sx/
 /ensime/
+
+recentf
+
+history
+
+ido.last
+
+.emacs.d.iml
