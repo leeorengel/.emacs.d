@@ -309,6 +309,9 @@
 ;; Find files by name and display results in dired
 (global-set-key (kbd "M-s f") 'find-name-dired)
 
+;; switch windows using visual number args
+(global-set-key (kbd "<C-tab>") 'switch-window)
+
 ;; Find file in project
 (global-set-key (kbd "C-x o") 'find-file-in-project)
 
