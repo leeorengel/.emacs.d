@@ -65,6 +65,7 @@
      beacon
      move-text
      gist
+     ag
      neotree
      htmlize
      visual-regexp
@@ -210,6 +211,7 @@
 ;; Smart M-x is smart
 (require 'smex)
 (smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
 
 ;; Setup key bindings
 (require 'key-bindings)
