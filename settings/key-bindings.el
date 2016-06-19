@@ -321,8 +321,10 @@
   ("g" text-scale-increase "in")
   ("l" text-scale-decrease "out"))
 
-(global-set-key (kbd "M-[") 'previous-buffer)
-(global-set-key (kbd "M-]") 'next-buffer)
+(global-set-key (kbd "M-[") 'nice-jumper/backward)
+;;(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'nice-jumper/forward)
+;;(global-set-key (kbd "M-]") 'next-buffer)
 
 ;; Find file in project, with specific patterns
 (global-unset-key (kbd "C-x C-o")) ;; which used to be delete-blank-lines (also bound to C-c C-<return>)

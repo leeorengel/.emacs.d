@@ -195,6 +195,10 @@
 (require 'change-inner)
 (require 'multifiles)
 
+;; nice jumper
+(require 'nice-jumper)
+(nice-jumper-mode t)
+
 ;; Don't use expand-region fast keys
 (setq expand-region-fast-keys-enabled nil)
 
