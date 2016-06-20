@@ -65,8 +65,6 @@
 (define-key cider-mode-map (kbd "C-c C-q") 'nrepl-close)
 (define-key cider-mode-map (kbd "C-c C-Q") 'cider-quit)
 
-(require 'yesql-ghosts)
-
 ;; indent [quiescent.dom :as d] specially
 
 (define-clojure-indent
