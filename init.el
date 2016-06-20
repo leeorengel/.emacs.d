@@ -60,6 +60,7 @@
      switch-window
      edn
      avy
+     inflections
      hydra
      paredit
      beacon
