@@ -62,6 +62,8 @@
      avy
      inflections
      hydra
+     idle-highlight-mode
+     fullframe
      paredit
      beacon
      move-text
@@ -124,6 +126,10 @@
 ;; which-key - a better guide-key
 (require 'which-key)
 (which-key-mode)
+
+;;fullframe
+(require 'fullframe)
+(fullframe magit-status magit-mode-quit-window)
 
 ;; beacon
 (beacon-mode 1)
