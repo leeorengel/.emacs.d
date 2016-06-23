@@ -277,15 +277,17 @@
 ;; Toggle quotes
 (global-set-key (kbd "C-\"") 'toggle-quotes)
 
+;; Projectile
+(global-set-key (kbd "M-o") 'projectile-find-file)
+(global-set-key (kbd "M-O") 'projectile-find-file-in-known-projects)
+(global-set-key (kbd "M-e") 'projectile-recentf)
+
 ;; Searching
 (global-set-key (kbd "M-F") 'ag-project-files)
 (global-set-key (kbd "M-G") 'ag-project-regexp)
 
 ;; Sorting
 (global-set-key (kbd "M-s l") 'sort-lines)
-
-;; Browse the kill ring
-(global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
 ;; Buffer file functions
 (global-set-key (kbd "C-x t") 'touch-buffer-file)
@@ -313,55 +315,51 @@
 ;; switch windows using visual number args
 (global-set-key (kbd "<C-tab>") 'switch-window)
 
-;; Find file in project
-(global-set-key (kbd "C-x o") 'find-file-in-project)
-
 (defhydra hydra-zoom (global-map "<f2>")
   "zoom"
   ("g" text-scale-increase "in")
   ("l" text-scale-decrease "out"))
 
+;; Go back/forward
 (global-set-key (kbd "M-[") 'nice-jumper/backward)
-;;(global-set-key (kbd "M-[") 'previous-buffer)
 (global-set-key (kbd "M-]") 'nice-jumper/forward)
-;;(global-set-key (kbd "M-]") 'next-buffer)
+
+;; Additional keybindings
+;; Go to line - ala IntelliJ
+(global-set-key (kbd "M-l") 'goto-line)
 
 ;; Find file in project, with specific patterns
-(global-unset-key (kbd "C-x C-o")) ;; which used to be delete-blank-lines (also bound to C-c C-<return>)
-(global-set-key (kbd "C-x C-o ja") (ffip-create-pattern-file-finder "*.java"))
-(global-set-key (kbd "C-x C-o js") (ffip-create-pattern-file-finder "*.js"))
-(global-set-key (kbd "C-x C-o jn") (ffip-create-pattern-file-finder "*.json"))
-(global-set-key (kbd "C-x C-o ht") (ffip-create-pattern-file-finder "*.html"))
-(global-set-key (kbd "C-x C-o cs") (ffip-create-pattern-file-finder "*.css"))
-(global-set-key (kbd "C-x C-o ft") (ffip-create-pattern-file-finder "*.feature"))
-(global-set-key (kbd "C-x C-o cl") (ffip-create-pattern-file-finder "*.clj"))
-(global-set-key (kbd "C-x C-o el") (ffip-create-pattern-file-finder "*.el"))
-(global-set-key (kbd "C-x C-o ed") (ffip-create-pattern-file-finder "*.edn"))
-(global-set-key (kbd "C-x C-o md") (ffip-create-pattern-file-finder "*.md"))
-(global-set-key (kbd "C-x C-o rb") (ffip-create-pattern-file-finder "*.rb"))
-(global-set-key (kbd "C-x C-o or") (ffip-create-pattern-file-finder "*.org"))
-(global-set-key (kbd "C-x C-o ph") (ffip-create-pattern-file-finder "*.php"))
-(global-set-key (kbd "C-x C-o tx") (ffip-create-pattern-file-finder "*.txt"))
-(global-set-key (kbd "C-x C-o vm") (ffip-create-pattern-file-finder "*.vm"))
-(global-set-key (kbd "C-x C-o xm") (ffip-create-pattern-file-finder "*.xml"))
-(global-set-key (kbd "C-x C-o in") (ffip-create-pattern-file-finder "*.ini"))
-(global-set-key (kbd "C-x C-o pr") (ffip-create-pattern-file-finder "*.properties"))
-(global-set-key (kbd "C-x C-o in") (ffip-create-pattern-file-finder "*.ini"))
-(global-set-key (kbd "C-x C-o ga") (ffip-create-pattern-file-finder "*.gradle"))
-(global-set-key (kbd "C-x C-o co") (ffip-create-pattern-file-finder "*.conf"))
-(global-set-key (kbd "C-x C-o j2") (ffip-create-pattern-file-finder "*.j2"))
-(global-set-key (kbd "C-x C-o sh") (ffip-create-pattern-file-finder "*.sh"))
-(global-set-key (kbd "C-x C-o ic") (ffip-create-pattern-file-finder "*.ico"))
-(global-set-key (kbd "C-x C-o sv") (ffip-create-pattern-file-finder "*.svg"))
-(global-set-key (kbd "C-x C-o !") (ffip-create-pattern-file-finder "*"))
+;;(global-unset-key (kbd "C-x C-o")) ;; which used to be delete-blank-lines (also bound to C-c C-<return>)
+;;(global-set-key (kbd "C-x C-o ja") (ffip-create-pattern-file-finder "*.java"))
+;;(global-set-key (kbd "C-x C-o js") (ffip-create-pattern-file-finder "*.js"))
+;;(global-set-key (kbd "C-x C-o jn") (ffip-create-pattern-file-finder "*.json"))
+;;(global-set-key (kbd "C-x C-o ht") (ffip-create-pattern-file-finder "*.html"))
+;;(global-set-key (kbd "C-x C-o cs") (ffip-create-pattern-file-finder "*.css"))
+;;(global-set-key (kbd "C-x C-o ft") (ffip-create-pattern-file-finder "*.feature"))
+;;(global-set-key (kbd "C-x C-o cl") (ffip-create-pattern-file-finder "*.clj"))
+;;(global-set-key (kbd "C-x C-o el") (ffip-create-pattern-file-finder "*.el"))
+;;(global-set-key (kbd "C-x C-o ed") (ffip-create-pattern-file-finder "*.edn"))
+;;(global-set-key (kbd "C-x C-o md") (ffip-create-pattern-file-finder "*.md"))
+;;(global-set-key (kbd "C-x C-o rb") (ffip-create-pattern-file-finder "*.rb"))
+;;(global-set-key (kbd "C-x C-o or") (ffip-create-pattern-file-finder "*.org"))
+;;(global-set-key (kbd "C-x C-o ph") (ffip-create-pattern-file-finder "*.php"))
+;;(global-set-key (kbd "C-x C-o tx") (ffip-create-pattern-file-finder "*.txt"))
+;;(global-set-key (kbd "C-x C-o vm") (ffip-create-pattern-file-finder "*.vm"))
+;;(global-set-key (kbd "C-x C-o xm") (ffip-create-pattern-file-finder "*.xml"))
+;;(global-set-key (kbd "C-x C-o in") (ffip-create-pattern-file-finder "*.ini"))
+;;(global-set-key (kbd "C-x C-o pr") (ffip-create-pattern-file-finder "*.properties"))
+;;(global-set-key (kbd "C-x C-o in") (ffip-create-pattern-file-finder "*.ini"))
+;;(global-set-key (kbd "C-x C-o ga") (ffip-create-pattern-file-finder "*.gradle"))
+;;(global-set-key (kbd "C-x C-o co") (ffip-create-pattern-file-finder "*.conf"))
+;;(global-set-key (kbd "C-x C-o j2") (ffip-create-pattern-file-finder "*.j2"))
+;;(global-set-key (kbd "C-x C-o sh") (ffip-create-pattern-file-finder "*.sh"))
+;;(global-set-key (kbd "C-x C-o ic") (ffip-create-pattern-file-finder "*.ico"))
+;;(global-set-key (kbd "C-x C-o sv") (ffip-create-pattern-file-finder "*.svg"))
+;;(global-set-key (kbd "C-x C-o !") (ffip-create-pattern-file-finder "*"))
 
 ;; View occurrence in occur mode
 (define-key occur-mode-map (kbd "v") 'occur-mode-display-occurrence)
 (define-key occur-mode-map (kbd "n") 'next-line)
 (define-key occur-mode-map (kbd "p") 'previous-line)
-
-;; Additional keybindings
-;; Go to line - ala IntelliJ
-(global-set-key (kbd "M-l") 'goto-line)
 
 (provide 'key-bindings)

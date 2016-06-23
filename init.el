@@ -86,6 +86,7 @@
      dired-details
      yasnippet
      smartparens
+     projectile
      ido-vertical-mode
      ido-at-point
      simple-httpd
@@ -145,7 +146,7 @@
 (require 'setup-hippie)
 (require 'setup-yasnippet)
 (require 'setup-perspective)
-(require 'setup-ffip)
+(require 'setup-projectile)
 (require 'setup-html-mode)
 (require 'setup-paredit)
 (require 'setup-rainbow-delimiters)
