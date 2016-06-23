@@ -1,5 +1,4 @@
 (require 'key-chord)
-(require 'avy)
 
 (key-chord-define-global "jj" 'avy-goto-char)
 (key-chord-define-global "jk" 'avy-goto-char-2)
