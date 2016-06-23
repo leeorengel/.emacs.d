@@ -58,6 +58,7 @@
   (packages-install
    '(magit
      switch-window
+     key-chord
      edn
      avy
      inflections
@@ -149,6 +150,7 @@
 (require 'setup-paredit)
 (require 'setup-rainbow-delimiters)
 (require 'setup-neotree)
+(require 'setup-key-chord)
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
