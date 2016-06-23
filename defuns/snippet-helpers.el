@@ -1,13 +1,5 @@
 ;; clojure
 
-(defun snippet--clojure-namespace-from-buffer-file-name ()
-  (replace-regexp-in-string "_" "-"
-   (replace-regexp-in-string "/" "."
-    (chop-prefix "test/"
-    (chop-prefix "src/"
-    (chop-suffix ".clj"
-     (substring (buffer-file-name) (length eproject-root))))))))
-
 (defun snippet--clojure-namespace-under-test ()
   (replace-regexp-in-string "-test" "" (snippet--clojure-namespace-from-buffer-file-name)))
 
