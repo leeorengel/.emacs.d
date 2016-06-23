@@ -147,14 +147,10 @@
 (require 'setup-yasnippet)
 (require 'setup-perspective)
 (require 'setup-projectile)
-(require 'setup-html-mode)
 (require 'setup-paredit)
 (require 'setup-rainbow-delimiters)
 (require 'setup-neotree)
 (require 'setup-key-chord)
-
-(require 'prodigy)
-(global-set-key (kbd "C-x M-m") 'prodigy)
 
 ;; Font lock dash.el
 (eval-after-load "dash" '(dash-enable-font-lock))
@@ -170,9 +166,6 @@
 (eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
 
-;; Load stuff on demand
-(autoload 'skewer-start "setup-skewer" nil t)
-(autoload 'skewer-demo "setup-skewer" nil t)
 (autoload 'auto-complete-mode "auto-complete" nil t)
 (eval-after-load 'flycheck '(require 'setup-flycheck))
 
