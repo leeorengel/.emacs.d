@@ -34,18 +34,6 @@
         (indent-for-tab-command)))
     (indent-for-tab-command)))
 
-(defun duplicate-current-line-or-region (arg)
-  "Duplicates the current line or region ARG times.
-If there's no region, the current line will be duplicated."
-  (interactive "p")
-  (if (region-active-p)
-      (let ((beg (region-beginning))
-            (end (region-end)))
-        (duplicate-region arg beg end)
-        (one-shot-keybinding "d" (λ (duplicate-region 1 beg end))))
-    (duplicate-current-line arg)
-    (one-shot-keybinding "d" 'duplicate-current-line)))
-
 (defun one-shot-keybinding (key command)
   (set-temporary-overlay-map
    (let ((map (make-sparse-keymap)))

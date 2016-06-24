@@ -256,7 +256,7 @@
 (global-set-key (kbd "<M-return>") 'new-line-dwim)
 
 ;; Duplicate region
-(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+(global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
 
 ;; Line movement
 (global-set-key (kbd "<C-S-down>") 'move-text-down)

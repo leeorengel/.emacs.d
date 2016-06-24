@@ -102,6 +102,7 @@
      prodigy
      cider
      string-edit
+     crux
      )))
 
 (condition-case nil
@@ -196,6 +197,7 @@
 (require 'smart-forward)
 (require 'change-inner)
 (require 'multifiles)
+(require 'crux)
 
 ;; nice jumper
 (require 'nice-jumper)
