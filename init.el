@@ -65,7 +65,6 @@
      hydra
      idle-highlight-mode
      fullframe
-     paredit
      beacon
      move-text
      gist
@@ -92,6 +91,7 @@
      simple-httpd
      nodejs-repl
      restclient
+     crux
      highlight-escape-sequences
      whitespace-cleanup-mode
      elisp-slime-nav
@@ -119,13 +119,6 @@
   (require-package 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
-;; guide-key
-;;(require 'guide-key)
-;;(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x 5" "M-t"))
-;;(guide-key-mode 1)
-;;(setq guide-key/recursive-key-sequence-flag t)
-;;(setq guide-key/popup-window-position 'bottom)
-
 ;; which-key - a better guide-key
 (require 'which-key)
 (which-key-mode)
@@ -148,20 +141,13 @@
 (require 'setup-yasnippet)
 (require 'setup-perspective)
 (require 'setup-projectile)
-(require 'setup-paredit)
 (require 'setup-rainbow-delimiters)
 (require 'setup-neotree)
 (require 'setup-key-chord)
+(require 'setup-smartparens)
 
 ;; Font lock dash.el
 (eval-after-load "dash" '(dash-enable-font-lock))
-
-;; Default setup of smartparens
-(require 'smartparens-config)
-(setq sp-autoescape-string-quote nil)
-(--each '(clojure-mode
-          markdown-mode)
-  (add-hook it 'turn-on-smartparens-mode))
 
 ;; Language specific setup files
 (eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
