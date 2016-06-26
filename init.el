@@ -68,7 +68,6 @@
      move-text
      gist
      git-timemachine
-     ag
      neotree
      htmlize
      visual-regexp
@@ -78,6 +77,7 @@
      flycheck
      flycheck-pos-tip
      which-key
+     multiple-cursors
      flx
      f
      flx-ido
@@ -150,6 +150,8 @@
 (require 'setup-hippie)
 (require 'setup-yasnippet)
 
+(require 'multiple-cursors)
+
 ;; Font lock dash.el
 (eval-after-load "dash" '(dash-enable-font-lock))
 
@@ -180,7 +182,6 @@
   (when (file-regular-p file)
     (load file)))
 
-(require 'multiple-cursors)
 (require 'delsel)
 (require 'jump-char)
 (require 'wgrep)
