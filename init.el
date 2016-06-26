@@ -59,7 +59,6 @@
    '(magit
      switch-window
      key-chord
-     edn
      avy
      inflections
      hydra
@@ -68,6 +67,7 @@
      beacon
      move-text
      gist
+     git-timemachine
      ag
      neotree
      htmlize
@@ -76,31 +76,32 @@
      fill-column-indicator
      flycheck
      flycheck-pos-tip
-     flycheck-clojure
      which-key
      flx
      f
      flx-ido
      ido-describe-bindings
      dired-details
-     yasnippet
-     smartparens
      projectile
      ido-vertical-mode
      ido-at-point
      simple-httpd
      nodejs-repl
      restclient
-     crux
      highlight-escape-sequences
      whitespace-cleanup-mode
      elisp-slime-nav
-     rainbow-delimiters
      dockerfile-mode
+     company
      clojure-mode
      clojure-mode-extra-font-locking
-     prodigy
+     rainbow-delimiters
+     flycheck-clojure
      cider
+     yasnippet
+     smartparens
+     edn
+     prodigy
      string-edit
      crux
      )))
@@ -145,6 +146,7 @@
 (require 'setup-neotree)
 (require 'setup-key-chord)
 (require 'setup-smartparens)
+(require 'setup-company)
 
 ;; Font lock dash.el
 (eval-after-load "dash" '(dash-enable-font-lock))
