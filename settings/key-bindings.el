@@ -258,8 +258,8 @@
 (global-set-key (kbd "M-e") 'projectile-recentf)
 
 ;; Searching
-(global-set-key (kbd "M-F") 'ag-project-files)
-(global-set-key (kbd "M-G") 'ag-project-regexp)
+(global-set-key (kbd "M-F") 'projectile-ag)
+;;(global-set-key (kbd "M-G") 'ag-project-regexp)
 
 ;; Sorting
 (global-set-key (kbd "M-s l") 'sort-lines)
