@@ -3,7 +3,6 @@
 (require 'clj-refactor)
 (require 'flycheck)
 (require 'flycheck-clojure)
-(require 'core-async-mode)
 (require 'hl-sexp)
 
 (add-hook 'clojure-mode-hook

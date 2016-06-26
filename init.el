@@ -97,6 +97,7 @@
      company
      clojure-mode
      clojure-mode-extra-font-locking
+     clj-refactor
      rainbow-delimiters
      flycheck-clojure
      workgroups2

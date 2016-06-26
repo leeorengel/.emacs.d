@@ -2,7 +2,6 @@
 
 (key-chord-define-global "jj" 'avy-goto-char)
 (key-chord-define-global "jk" 'avy-goto-char-2)
-(key-chord-define-global "jl" 'avy-goto-word-1)
 (key-chord-define-global "xx" 'execute-extended-command)
 
 (key-chord-mode 1)
