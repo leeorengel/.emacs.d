@@ -74,6 +74,7 @@
      visual-regexp
      markdown-mode
      fill-column-indicator
+     expand-region
      flycheck
      flycheck-pos-tip
      which-key
@@ -88,6 +89,7 @@
      simple-httpd
      nodejs-repl
      restclient
+     hl-sexp
      highlight-escape-sequences
      whitespace-cleanup-mode
      elisp-slime-nav
@@ -138,21 +140,22 @@
 (eval-after-load 'magit '(require 'setup-magit))
 (eval-after-load 'grep '(require 'setup-rgrep))
 (eval-after-load 'shell '(require 'setup-shell))
-(require 'setup-hippie)
-(require 'setup-yasnippet)
 (require 'setup-perspective)
-(require 'setup-projectile)
-(require 'setup-rainbow-delimiters)
 (require 'setup-neotree)
+(require 'setup-projectile)
 (require 'setup-key-chord)
 (require 'setup-smartparens)
+(require 'setup-rainbow-delimiters)
 (require 'setup-company)
+(require 'setup-hippie)
+(require 'setup-yasnippet)
 
 ;; Font lock dash.el
 (eval-after-load "dash" '(dash-enable-font-lock))
 
 ;; Language specific setup files
 (eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
+(eval-after-load 'clojure-mode '(require 'setup-cider))
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
 
 (autoload 'auto-complete-mode "auto-complete" nil t)
@@ -177,7 +180,6 @@
   (when (file-regular-p file)
     (load file)))
 
-(require 'expand-region)
 (require 'multiple-cursors)
 (require 'delsel)
 (require 'jump-char)
@@ -190,12 +192,6 @@
 ;; nice jumper
 (require 'nice-jumper)
 (nice-jumper-mode t)
-
-;; Don't use expand-region fast keys
-(setq expand-region-fast-keys-enabled nil)
-
-;; Show expand-region command used
-(setq er--show-expansion-message t)
 
 ;; Fill column indicator
 (require 'fill-column-indicator)
@@ -241,8 +237,3 @@
 
 ; Set highlight exceeding character limit to 120 rather than 80
 (setq whitespace-line-column 120)
-
-;; Enable showing line numbers on startup
-;; this isn't working right now for some reason
-;;(global-linum-mode t)
-
