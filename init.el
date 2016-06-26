@@ -99,6 +99,7 @@
      clojure-mode-extra-font-locking
      rainbow-delimiters
      flycheck-clojure
+     workgroups2
      cider
      yasnippet
      smartparens
@@ -140,7 +141,6 @@
 (eval-after-load 'magit '(require 'setup-magit))
 (eval-after-load 'grep '(require 'setup-rgrep))
 (eval-after-load 'shell '(require 'setup-shell))
-(require 'setup-perspective)
 (require 'setup-neotree)
 (require 'setup-projectile)
 (require 'setup-key-chord)
@@ -149,7 +149,7 @@
 (require 'setup-company)
 (require 'setup-hippie)
 (require 'setup-yasnippet)
-
+(require 'setup-workgroups2)
 (require 'multiple-cursors)
 
 ;; Font lock dash.el
