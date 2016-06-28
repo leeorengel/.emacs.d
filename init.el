@@ -99,7 +99,9 @@
      clojure-mode-extra-font-locking
      clj-refactor
      rainbow-delimiters
+     aggressive-indent
      flycheck-clojure
+     dumb-jump
      workgroups2
      cider
      yasnippet
@@ -108,6 +110,7 @@
      prodigy
      string-edit
      crux
+     ggtags
      )))
 
 (condition-case nil
@@ -127,6 +130,9 @@
 ;; which-key - a better guide-key
 (require 'which-key)
 (which-key-mode)
+
+(require 'dumb-jump)
+(dumb-jump-mode)
 
 ;;fullframe
 (require 'fullframe)

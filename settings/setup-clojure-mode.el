@@ -17,6 +17,9 @@
 (eval-after-load 'flycheck '(flycheck-clojure-setup))
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; aggressive indent mode
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+
 ;; Enable highlighting of current sexp
 (add-hook 'clojure-mode-hook #'hl-sexp-mode)
 (add-hook 'lisp-mode-hook #'hl-sexp-mode)

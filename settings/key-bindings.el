@@ -1,7 +1,4 @@
-;; I don't need to kill emacs that easily
-;; the mnemonic is C-x REALLY QUIT
-(global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
-(global-set-key (kbd "C-x C-c") 'delete-frame)
+(global-set-key (kbd "C-x C-c") 'save-buffers-kill-terminal)
 
 ;; Completion that uses many different methods to find options.
 (global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
@@ -15,9 +12,6 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-;; Use C-x C-m to do M-x per Steve Yegge's advice
-(global-set-key (kbd "C-x C-m") 'smex)
 
 ;; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
@@ -176,9 +170,6 @@
 ;; Webjump let's you quickly search google, wikipedia, emacs wiki
 (global-set-key (kbd "C-x g") 'webjump)
 (global-set-key (kbd "C-x M-g") 'browse-url-at-point)
-
-;; Completion at point
-(global-set-key (kbd "C-<tab>") 'completion-at-point)
 
 ;; Like isearch, but adds region (if any) to history and deactivates mark
 (global-set-key (kbd "C-s") 'isearch-forward-use-region)
