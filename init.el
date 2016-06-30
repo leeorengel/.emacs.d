@@ -95,6 +95,7 @@
      elisp-slime-nav
      dockerfile-mode
      company
+     company-flx
      clojure-mode
      clojure-mode-extra-font-locking
      clj-refactor

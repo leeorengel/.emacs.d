@@ -1,5 +1,8 @@
 (require 'company)
 
-(add-hook 'after-init-hook 'global-company-mode)
+(global-company-mode)
+
+(with-eval-after-load 'company
+  (company-flx-mode +1))
 
 (provide 'setup-company)
