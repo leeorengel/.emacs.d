@@ -39,7 +39,7 @@
 (setq cider-auto-select-error-buffer t)
 
 ;; Prevent the auto-display of the REPL buffer in a separate window after connection is established
-(setq cider-repl-pop-to-buffer-on-connect nil)
+;;(setq cider-repl-pop-to-buffer-on-connect nil)
 
 ;; Don't prompt for symbols
 (setq cider-prompt-for-symbol nil)
