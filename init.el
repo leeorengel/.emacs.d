@@ -111,8 +111,8 @@
      prodigy
      string-edit
      crux
-     ggtags
-     )))
+     ggtags)
+   ))
 
 (condition-case nil
     (init--install-packages)
@@ -138,6 +138,9 @@
 ;;fullframe
 (require 'fullframe)
 (fullframe magit-status magit-mode-quit-window)
+
+;; Enable ggtags for all programming modes
+(add-hook 'prog-mode-hook 'ggtags-mode)
 
 ;; beacon
 (beacon-mode 1)
